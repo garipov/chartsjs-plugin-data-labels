@@ -31,5 +31,13 @@
   "dependencies": {
     "chart.js": "^2.4.0",
     "lodash.defaults": "^4.2.0"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/garipov/chartsjs-plugin-data-labels.git"
+  },
+  "bugs": {
+    "url": "https://github.com/garipov/chartsjs-plugin-data-labels/issues"
+  },
+  "homepage": "https://github.com/garipov/chartsjs-plugin-data-labels#readme"
 }
