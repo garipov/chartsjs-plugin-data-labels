@@ -6,6 +6,8 @@ function Label(obj) {
   this.textBaseline = obj.textBaseline;
   this.fontSize = obj.fontSize;
   this.fontColor = obj.fontColor;
+  this.fontStyle = obj.fontStyle;
+  this.fontFamily = obj.fontFamily;
 
   this.value = obj.value;
 }

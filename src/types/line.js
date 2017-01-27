@@ -64,6 +64,8 @@ function LinePlugin(graphs) {
         textBaseline: textBaseline,
         fontSize: graph.options.fontSize,
         fontColor: graph.options.colors[index],
+        fontStyle: graph.options.fontStyle,
+        fontFamily: graph.options.fontFamily,
         value: formattedLabel
       });
 

@@ -21,6 +21,7 @@ function draw(ctx, label) {
   ctx.textAlign = label.textAlign;
   ctx.textBaseline = label.textBaseline;
   ctx.fillStyle = label.fontColor;
+  ctx.font = label.fontStyle + ' ' + label.fontSize + 'px ' + label.fontFamily;
   ctx.fillText(label.value, label.x, label.y);
 }
 
@@ -29,6 +30,8 @@ function getDefaults (type, dataset) {
     display: true,
     format: formatFns[type] || formatFns.default,
     fontSize: Chart.defaults.global.defaultFontSize,
+    fontStyle: Chart.defaults.global.defaultFontStyle,
+    fontFamily: Chart.defaults.global.defaultFontFamily,
     color: Chart.defaults.global.defaultFontColor,
     colors: []
   });

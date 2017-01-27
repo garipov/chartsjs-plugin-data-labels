@@ -24,6 +24,8 @@ function horizontalBar (graphs) {
             textBaseline: 'middle',
             fontSize: graph.options.fontSize,
             fontColor: graph.options.colors[index],
+            fontStyle: graph.options.fontStyle,
+            fontFamily: graph.options.fontFamily,
             value: formattedValue
           }));
         } else {
@@ -34,6 +36,8 @@ function horizontalBar (graphs) {
             textBaseline: 'middle',
             fontSize: graph.options.fontSize,
             fontColor: graph.options.colors[index],
+            fontStyle: graph.options.fontStyle,
+            fontFamily: graph.options.fontFamily,
             value: formattedValue
           }));
         }
