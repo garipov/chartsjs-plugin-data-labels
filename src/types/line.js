@@ -28,12 +28,13 @@ function LinePlugin(graphs) {
       var prevPoint = points[index - 1];
       var nextPoint = points[index + 1];
       var model = point._model;
+      var isInter = prevPoint && nextPoint;
 
       var x = model.x;
       var y = model.y;
       var priority, textAlign, textBaseline;
 
-      if (prevPoint && nextPoint) {
+      if (isInter) {
         var prevModel = prevPoint._model;
         var nextModel = nextPoint._model;
         textAlign = 'center';
@@ -49,14 +50,15 @@ function LinePlugin(graphs) {
           textBaseline = 'bottom';
         }
       } else {
+        var isLeft = index === 0;
         y -= margin;
+        x += isLeft ? 3 : 0;
         priority = -model.y;
         textBaseline = 'bottom';
-        textAlign = index ? 'right' : 'left';
+        textAlign = isLeft ? 'left' : 'right';
       }
 
       var value = graph.dataset.data[index];
-      var formattedLabel = graph.options.format(value, point);
       var label = new Label({
         x: x,
         y: y,
@@ -66,13 +68,13 @@ function LinePlugin(graphs) {
         fontColor: graph.options.colors[index],
         fontStyle: graph.options.fontStyle,
         fontFamily: graph.options.fontFamily,
-        value: formattedLabel
+        value: graph.options.format(value, point)
       });
 
       label.borders = getBorders(label);
 
-      if (label.borders.x1 < point._xScale.left
-        || label.borders.x2 > point._xScale.right
+      if (isInter && (label.borders.x1 < point._xScale.left
+        || label.borders.x2 > point._xScale.right)
         || label.borders.y1 < point._yScale.top
         || label.borders.y2 > point._yScale.bottom) {
         return;

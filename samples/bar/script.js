@@ -36,7 +36,7 @@ new window.Chart('canvas1', {
   }
 });
 
-new window.Chart('canvas2', {
+new window.Chart('canvas4', {
   type: 'bar',
   data: {
     labels: ['January', 'February', 'March', 'April', 'May', 'June', 'January', 'February', 'March', 'April', 'May', 'June', 'January', 'February', 'March', 'April', 'May', 'June', 'January', 'February', 'March', 'April', 'May', 'June', 'January', 'February', 'March', 'April', 'May', 'June', 'January', 'February', 'March', 'April', 'May', 'June'],
@@ -93,7 +93,7 @@ new window.Chart('canvas3', {
 });
 
 
-new window.Chart('canvas4', {
+new window.Chart('canvas2', {
   type: 'bar',
   data: {
     labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
@@ -117,14 +117,17 @@ new window.Chart('canvas4', {
           'rgba(255, 159, 64, 1)'
         ],
         borderWidth: 1,
-        data: [65, 59, 80, 81, 56, 55, 40],
+        data: [65, 60, -80, 81, 56, 55, 40]
       }
     ]
   },
   options: {
     animation: {
       duration: 0
+    },
+    elements: {
+      rectangle: {
+      }
     }
   }
 });
-
