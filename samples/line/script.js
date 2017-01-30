@@ -1,5 +1,3 @@
-// window.Chart.defaults.global.defaultFontSize = 26;
-
 new window.Chart('canvas1', {
   type: 'line',
   data: {
