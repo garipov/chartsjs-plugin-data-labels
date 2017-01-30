@@ -24,6 +24,9 @@ new window.Chart('canvas1', {
   options: {
     animation: {
       duration: 0
+    },
+    legend: {
+      display: false
     }
   }
 });
@@ -43,6 +46,9 @@ new window.Chart('canvas2', {
     datasets: [
       {
         data: [300, 50, 100, 200, 300, 500, 50],
+        dataLabels: {
+          minRadius: 30,
+        },
         backgroundColor: [
           '#FF6384',
           '#36A2EB',

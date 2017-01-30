@@ -33,7 +33,8 @@ function getDefaults (type, dataset) {
     fontStyle: Chart.defaults.global.defaultFontStyle,
     fontFamily: Chart.defaults.global.defaultFontFamily,
     color: Chart.defaults.global.defaultFontColor,
-    colors: []
+    colors: [],
+    minRadius: 35
   });
 
   options.colors = dataset.data.map(function(value, index) {
