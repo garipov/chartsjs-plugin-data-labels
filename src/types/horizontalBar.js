@@ -12,10 +12,9 @@ function horizontalBar (graphs) {
     points.forEach(function(point, index) {
       var margin = graph.options.fontSize / 2;
       var model = points[index]._model;
-      if (Math.abs(model.base - model.x) > strSize(graph.dataset.data[index]) + (graph.options.fontSize + margin) && model.height > graph.options.fontSize + margin) {
-        var value = graph.dataset.data[index];
-        var formattedValue = graph.options.format(value, point);
-
+      var value = graph.dataset.data[index];
+      var formattedValue = graph.options.format(value, point);
+      if (Math.abs(model.base - model.x) > strSize(formattedValue) + (graph.options.fontSize + margin) && model.height > graph.options.fontSize + margin) {
         if (model.base < model.x) {
           labelsForDraw.push(new Label({
             x: model.x - margin,
