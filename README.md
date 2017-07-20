@@ -20,6 +20,7 @@ To configure this plugin, you can simply add the following entries to your chart
 | `color` | `String` | `Chart.defaults.global.defaultFontColor` | One color for all labels.
 | `colors` | `Array` | `[]` | It takes a set of values for each labels. If not specified, the default color.
 | `minRadius` | `Number` | `35` | The minimum radius, in pixels, in which even the labels are displayed (for pie charts).
+| `suffix` | `String` | `undefined` | Suffix to append to each label (eg: `'%'`).
 
 For example:
 ```

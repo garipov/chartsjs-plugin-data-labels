@@ -58,7 +58,7 @@ function LinePlugin(graphs) {
         textAlign = isLeft ? 'left' : 'right';
       }
 
-      var value = graph.dataset.data[index];
+      var value = graph.dataset.data[index] + (graph.options.suffix || '');
       var label = new Label({
         x: x,
         y: y,

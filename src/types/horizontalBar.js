@@ -13,7 +13,7 @@ function horizontalBar (graphs) {
       var margin = graph.options.fontSize / 2;
       var model = points[index]._model;
       var value = graph.dataset.data[index];
-      var formattedValue = graph.options.format(value, point);
+      var formattedValue = graph.options.format(value, point) + (graph.options.suffix || '');
       if (Math.abs(model.base - model.x) > strSize(formattedValue) + (graph.options.fontSize + margin) && model.height > graph.options.fontSize + margin) {
         if (model.base < model.x) {
           labelsForDraw.push(new Label({
