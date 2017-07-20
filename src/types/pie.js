@@ -24,7 +24,7 @@ function PiePlugin (graphs) {
           fontColor: graph.options.colors[index],
           fontStyle: graph.options.fontStyle,
           fontFamily: graph.options.fontFamily,
-          value: graph.options.format(graph.dataset.data[index], point)
+          value: graph.options.format(graph.dataset.data[index] + (graph.options.suffix || ''), point)
         }));
       }
     });
